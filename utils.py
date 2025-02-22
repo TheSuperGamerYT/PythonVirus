@@ -1,3 +1,5 @@
+# VIRUS! Install on a virtual machine!
+
 import os
 import time
 
